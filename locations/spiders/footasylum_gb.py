@@ -13,7 +13,6 @@ class FootasylumGBSpider(SitemapSpider, StructuredDataSpider):
     item_attributes = {"brand": "Footasylum", "brand_wikidata": "Q126913565"}
     sitemap_urls = ["https://www.footasylum.com/ArticlesSiteMap.xml"]
     sitemap_rules = [("https://www.footasylum.com/store-locator/[^/]+/", "parse_sd")]
-    requires_proxy = True
     wanted_types = ["Store"]
     drop_attributes = {"facebook", "image", "twitter"}
 
