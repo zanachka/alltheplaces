@@ -31,7 +31,6 @@ class KfcESSpider(scrapy.Spider):
     # api.kfc.es hangs/times out on requests with a non-browser User-Agent
     # (e.g. the default ATP one) rather than returning an HTTP error.
     custom_settings = {"ROBOTSTXT_OBEY": False, "USER_AGENT": FIREFOX_LATEST}
-    requires_proxy = True
 
     def parse(self, response, **kwargs):
         for store in response.json():
